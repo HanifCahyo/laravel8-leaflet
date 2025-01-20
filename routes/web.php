@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TitikController::class, 'index']);
 Route::get('/titik/json', [TitikController::class, 'json']);
+Route::get('/titik/lokasi/{id?}', [TitikController::class, 'lokasi']);

@@ -14,12 +14,19 @@ class TitikController extends Controller
     //
     public function index()
     {
-        return view('home');
+        $results = $this->TitikModel->allLokasi();
+        return view('home', ['lokasi' => $results]);
     }
 
     public function json()
     {
         $results = $this->TitikModel->allData();
+        return json_encode($results);
+    }
+
+    public function lokasi($id = '')
+    {
+        $results = $this->TitikModel->getLokasi($id);
         return json_encode($results);
     }
 }
