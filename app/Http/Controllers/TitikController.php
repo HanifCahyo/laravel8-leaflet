@@ -29,4 +29,9 @@ class TitikController extends Controller
         $results = $this->TitikModel->getLokasi($id);
         return json_encode($results);
     }
+
+    public function maker()
+    {
+        return view('maker');
+    }
 }

@@ -19,5 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [TitikController::class, 'index']);
+Route::get('/maker', [TitikController::class, 'maker']);
+
 Route::get('/titik/json', [TitikController::class, 'json']);
 Route::get('/titik/lokasi/{id?}', [TitikController::class, 'lokasi']);
