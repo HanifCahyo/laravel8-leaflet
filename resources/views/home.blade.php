@@ -111,7 +111,7 @@
         "AAPTxy8BH1VEsoebNVZXo8HurDEMCVzcg2e_v0-cTZW2J9uhkTG4jBjBd_1nmhddasLXJlRV5R9oMn_mWMVsAbdAbCo-kHUobHAUldTiW_L8YNKwjUv-5sl6uEXFXvTPHlU3xWrdgysOCjwzVHH-UDyts0ivA4_hlMu1p7tSZopNm4KF1N3g4CQ6_KLjZDExvlSpdlapJtIIg4nx3YH92LVJF115aqCjfxDSUPRbsu1SQCM.AT1_KSBmHgWL";
     const map = L.map("map", {
         minZoom: 2,
-        maxZoom: 18 // Zoom maksimal, sesuaikan dengan kebutuhan
+        maxZoom: 30 // Zoom maksimal, sesuaikan dengan kebutuhan
 
     })
 
@@ -263,6 +263,7 @@
     })
 
     var lyr_lokasi = L.markerClusterGroup();
+    var geoLayer;
 
     // GeoJSON Polygon Dengan Garis Putus"//
     $.getJSON('geojson/map.geojson', function(json) {

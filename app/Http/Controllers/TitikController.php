@@ -7,6 +7,8 @@ use App\Models\TitikModel;
 
 class TitikController extends Controller
 {
+    private $TitikModel;
+
     public function __construct()
     {
         $this->TitikModel = new TitikModel();
